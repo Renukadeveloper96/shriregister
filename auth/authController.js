@@ -5,13 +5,16 @@ var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var config = require('../config');
 var User = require('./userSchema');
+const dotenv = require('dotenv');
+dotenv.config()
+
 
 router.use(bodyParser.urlencoded({extended:true}));
 router.use(bodyParser.json());
 
 //get All user
 
-router.get('/user',(req,res) => {
+router.get('/users',(req,res) => {
     User.find({},(err,result) => {
         if(err) throw err;
         res.send(result)

@@ -8,5 +8,5 @@ var userSchema = new mongoose.Schema({
     role:String
 })
 
-mongoose.model('user',userSchema);
-module.exports = mongoose.model('user')
+mongoose.model('User',userSchema);
+module.exports = mongoose.model('User')
